@@ -2,14 +2,14 @@
 title: "Samurai Slasher"
 subtitle: "A minimalistic, fast paced, multiplayer fighting game."
 date: "March-April 2019"
-update: "March-April 2019"
+update: "5"
 tags: ["book", "singer", "lorem"]
 category: "Gameplay Programming"
 project: "https://fshh.itch.io/samurai-slasher"
 demo: "https://github.com/fshh/SamuraiSlasher"
 featuredImage: "../../img/post/samuraiSlasher.png"
 trailer: ""
-screenshots: ["samuraiSlasher.png"]
+screenshots: ["samuraiSlasher.png", "samurai2.png", "samurai3.png", "samurai4.png", "samurai5.png"]
 ---
 
 ### Project Description:

@@ -6,14 +6,18 @@ module.exports = {
     keywords: `code, programming, games, max fortna`,
     siteUrl: `https://gatsby-starter-fine.netlify.com`
   },
+  flags: {
+  DEV_SSR: false
+  },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-jss`,
     `gatsby-plugin-flow`,
     `gatsby-disable-404`,
     `gatsby-plugin-react-helmet`,
     `gatsby-remark-copy-linked-files`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-emotion`,
       options: {
@@ -38,6 +42,13 @@ module.exports = {
         name: `src`,
         path: `${__dirname}/src/`
       }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/img`
+      },
     },
     {
       resolve: "gatsby-transformer-remark",

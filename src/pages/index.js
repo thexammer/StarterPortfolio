@@ -4,11 +4,6 @@ import Layout from "../components/layout";
 import Img from "gatsby-image";
 import { SinglePost, PostInfo, PreTitle, Title, Subtitle, Update, Freshnew, Excrept, Card, CardColumns }  from "../components/style/emo-home-posts";
 
-let minutes = 1000 * 60;
-let hours = minutes * 60;
-let days = hours * 24;
-let months = days * 30;
-
 export default ({ data }) => {
   return (
     <Layout>
@@ -39,7 +34,7 @@ export default ({ data }) => {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___update], order: DESC }
+      sort: { fields: [frontmatter___update], order: ASC }
       filter: { frontmatter: { category: { ne: "2ndcat" } } }
     ) {
       edges {

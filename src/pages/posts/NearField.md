@@ -2,14 +2,14 @@
 title: "Near-Field Gladitor"
 subtitle: "An arena fighter with a magnet based weapon"
 date: "August 2019"
-update: "August 2019"
+update: "1"
 tags: ["book", "singer", "lorem"]
 category: "Game Programming, AI Programming, Tools Programming, Audio Implementation"
 project: "https://fshh.itch.io/near-field-gladiator"
 demo: "https://github.com/fshh/GMTK-Game-Jam-2019"
 featuredImage: "../../img/post/NearFieldGladiator.png"
-trailer: ""
-screenshots: ["NearFieldGladiator.png"]
+trailer: "https://www.youtube.com/embed/20hPEqKvfak"
+screenshots: ["NearFieldGladiator.png", "nfg1.png", "nfg2.png", "nfg3.png", "nfg4.png", "nfg5.png"]
 ---
 
 ### Project Description:

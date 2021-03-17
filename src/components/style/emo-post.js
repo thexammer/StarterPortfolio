@@ -70,11 +70,11 @@ export const MainPost = styled.article`
 export const MediaBar = styled.aside`
     max-width: 100%;
     width: 500px;
-    padding: 10px 20px 30px 20px;
+    padding: 0px 20px 30px 20px;
 
     ${mwS.medium(css`
       max-width: 97%;
-      padding: 10px 50px 30px 50px;
+      padding: 0px 50px 30px 50px;
     `)}
    ${mwS.large(css`
       display: inline-block;
@@ -83,10 +83,29 @@ export const MediaBar = styled.aside`
     `)};
 `;
 
-export const Screenshots = styled.span`
-    max-width: 500px;
-    top-padding: 10px;
-`;
+export const Screenshots = ({ screenShot }) => (
+  <div
+    css={`
+      max-width: 100%;
+      width: 500px;
+      top-padding: 10px;
+      left-padding: 20px;
+
+    ${mwS.medium(css`
+      max-width: 97%;
+      top-padding: 10px;
+      left-padding: 50px;
+    `)}
+   ${mwS.large(css`
+      display: inline-block;
+      float:left;
+
+    `)};
+    `}
+  >
+    {screenShot}
+  </div>
+);
 
 export const Title = styled.h3`
 `;

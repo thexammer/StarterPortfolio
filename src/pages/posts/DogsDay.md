@@ -1,8 +1,8 @@
 ---
 title: "Dogs Day"
 subtitle: "A narrative game about lost dogs"
-date: "January 2019"
-update: "November 2019"
+date: "January/November 2019"
+update: "3"
 tags: ["Game Programming", "Gameplay Scripting", "Audio"]
 category: "Game Programming, Gameplay Scripting, Audio Implementation"
 project: "https://maxfortna.itch.io/dogs-day"

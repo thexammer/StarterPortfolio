@@ -1,0 +1,99 @@
+.slick-override-prev,
+.slick-override-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: unset;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+
+    margin-left: 50%;
+
+    -webkit-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-override-prev:hover,
+.slick-override-prev:focus,
+.slick-override-next:hover,
+.slick-override-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-override-prev:hover:before,
+.slick-override-prev:focus:before,
+.slick-override-next:hover:before,
+.slick-override-next:focus:before
+{
+    opacity: 1;
+}
+.slick-override-prev.slick-override-disabled:before,
+.slick-override-next.slick-override-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-override-prev:before,
+.slick-override-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1.1;
+
+    opacity: .75;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-override-prev
+{
+    left: -25px;
+}
+[dir='rtl'] .slick-override-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-override-prev:before
+{
+    content: '←';
+}
+[dir='rtl'] .slick-override-prev:before
+{
+    content: '→';
+}
+
+.slick-override-next
+{
+    right: -25px;
+}
+[dir='rtl'] .slick-override-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-override-next:before
+{
+    content: '→';
+}
+[dir='rtl'] .slick-override-next:before
+{
+    content: '←';
+}

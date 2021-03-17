@@ -2,7 +2,7 @@
 title: "C++ Game Engine"
 subtitle: "A custom game engine made with SDL"
 date: "January-April 2020"
-update: "January-April 2020"
+update: "4"
 tags: ["Game Programming", "Gameplay Scripting", "Audio"]
 category: "Game Programming, Engine Programming, Tools Programming"
 project: ""

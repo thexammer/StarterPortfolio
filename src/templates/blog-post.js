@@ -2,7 +2,31 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Img from "gatsby-image";
-import { Header, MainPost, PreTitle, Title,Subtitle, Tags, Date, Stats, SocialShare, MediaBar, Screenshots } from "../components/style/emo-post";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../components/style/slick-overrides.css"
+import { Header, MainPost, PreTitle, Title, Subtitle, Tags, Date, Stats, SocialShare, MediaBar, Screenshots } from "../components/style/emo-post";
+
+function NextArrow(props) {
+  const {onClick} = props;
+  return (
+    <div
+      className="slick-override-next"
+      onClick={onClick}
+    />
+  );
+}
+
+function PrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      className="slick-override-prev"
+      onClick={onClick}
+    />
+  );
+}
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -14,6 +38,18 @@ export default ({ data }) => {
     }
     return false;
   });
+
+  const SliderSettings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  }
+
   return (
     <Layout>
       <MainPost>
@@ -23,9 +59,9 @@ export default ({ data }) => {
           <Subtitle>{post.frontmatter.subtitle}</Subtitle>
           <Tags>
             {post.frontmatter.project !== "" &&
-              <li key={0}><a href={post.frontmatter.project} target={"_blank"}>itch.io Page</a></li>}
+              <li key={0}><a href={post.frontmatter.project} target={"_blank"} rel="nofollow noopener noreferrer">itch.io Page</a></li>}
             {post.frontmatter.demo !== "" &&
-              <li key={1}><a href={post.frontmatter.demo} target={"_blank"}>Code Repository</a></li>}
+              <li key={1}><a href={post.frontmatter.demo} target={"_blank"} rel="nofollow noopener noreferrer">Code Repository</a></li>}
           </Tags>
         </Header>
         <div
@@ -34,34 +70,19 @@ export default ({ data }) => {
         />
         <footer>
           <Date>{post.frontmatter.date}</Date>
-	        {/*<Tags>
-		        {post.frontmatter.tags.map((tag, index) => (
-			        <li key={index}>{tag}</li>
-		        ))}
-	        </Tags>
-           <Stats>
-            <SocialShare>
-              <li className={"social-icon"}>
-                <Link to="#">
-                  <span className={"fab fa-twitter"}> </span>
-                </Link>
-              </li>
-              <li className={"social-icon"}>
-                <Link to="#">
-                  <span className={"fab fa-facebook"}> </span>
-                </Link>
-              </li>
-            </SocialShare>
-          </Stats> */}
         </footer>
       </MainPost>
       <MediaBar>
         {post.frontmatter.trailer !== "" &&
           <div><h3>Trailer</h3>
-          <iframe width="100%" height="100%" src={post.frontmatter.trailer}></iframe></div>}
+          <iframe width="500" height="300" src={post.frontmatter.trailer}></iframe></div>}
         <h3>Screenshots</h3>
-        {screenshots.map((screenshot) => (
-            <Img fluid={screenshot.node.fluid} />))}
+        <div>
+        <Slider {...SliderSettings}>
+          {screenshots.map((screenshot, index) => (
+          <Img key={index} fluid={screenshot.node.fluid} />))}
+        </Slider>
+        </div>
       </MediaBar>
     </Layout>
   );

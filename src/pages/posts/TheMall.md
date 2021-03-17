@@ -2,14 +2,14 @@
 title: "THEMALL"
 subtitle: "A game about a very strange mall"
 date: "January 2021"
-update: "January 2021"
+update: "2"
 tags: ["book", "singer", "lorem"]
 category: "Game Programming, Enviroment Design"
 project: "https://jelindo.itch.io/weird-mall"
 demo: "https://github.com/thexammer/WeirdMallGame"
 featuredImage: "../../img/post/THEMALL.png"
-trailer: ""
-screenshots: ["THEMALL.png"]
+trailer: "https://www.youtube.com/embed/IPUPAme0h3o"
+screenshots: ["THEMALL.png", "candle.png", "fish.png", "shoe.png", "pool.png", "pet.png", "mallPart.png"]
 ---
 
 ### Project Description:
